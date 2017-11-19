@@ -6,10 +6,29 @@ TODO
 
 
 
-
-
-
 # JPF
+
+...
+
+'''markdown
+Running a basic sample:
+
+Make sure you have docker installed by running:
+> docker -v
+
+Download the docker image with jpf -> 
+> [Link](url)
+
+Load the image from the .tar file you just downloaded
+> gunzip -c jpf-container.tgz | docker load
+
+Run it
+> docker run -it jpf
+
+Run JPF with a sample
+> cd /home/jpf/jpf-core/
+> java -jar build/RunJPF.jar src/examples/NumericValueCheck.jpf
+'''
 
 TODO
 
@@ -19,30 +38,4 @@ TODO
 
 
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/davinomjr/model-checking-tutorial/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
