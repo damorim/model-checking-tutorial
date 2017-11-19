@@ -6,36 +6,31 @@ TODO
 
 
 
+
 # JPF
 
 ...
 
-'''markdown
+```markdown
 Running a basic sample:
 
 Make sure you have docker installed by running:
-> docker -v
+> $ docker -v
 
 Download the docker image with jpf -> 
-> [Link](url)
+> link
 
 Load the image from the .tar file you just downloaded
-> gunzip -c jpf-container.tgz | docker load
+> $ gunzip -c jpf-container.tgz | docker load
 
 Run it
-> docker run -it jpf
+> $ docker run -it jpf
 
 Run JPF with a sample
-> cd /home/jpf/jpf-core/
-> java -jar build/RunJPF.jar src/examples/NumericValueCheck.jpf
-'''
-
-TODO
+> $ cd /home/jpf/jpf-core/
+> $ java -jar build/RunJPF.jar src/examples/NumericValueCheck.jpf
+```
 
 # SPF
 
 TODO
-
-
-
-
