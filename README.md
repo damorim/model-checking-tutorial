@@ -15,15 +15,8 @@ TODO
 ```markdown
 
 Make sure you have docker installed by running:
-> $ docker -v
+> $ docker run -it lhsm/jpf-examples:latest
 
-Download the [Dockerfile]https://drive.google.com/file/d/1EWKDRwgO3pnUAdz3eXI-WUZ1hJsskQv7/view?usp=sharing 
-
-Build 
-> $ docker build -t jpf .
-
-Run it (Simple JPF numeric example)
-> $ docker run -it jpf
 ```
 
 # SPF
