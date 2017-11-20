@@ -2,9 +2,6 @@
 
 TODO
 
-
-
-
 # JPF
 
 ...
@@ -12,12 +9,12 @@ TODO
 
 ### Running a basic sample:
 
+System requirements:
+- Docker >= 17.09.0-ce ([Download](https://store.docker.com/search?offering=enterprise&type=edition)).
+
+To run the samples, simply run the following command:
 ```markdown
 
-# Make sure you have docker installed by running:
-> $ docker -v
-
-# Then, just execute this command and press <Enter>
 > $ docker run -it lhsm/jpf-examples:latest
 
 ```
