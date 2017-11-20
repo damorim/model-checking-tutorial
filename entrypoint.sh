@@ -21,5 +21,5 @@ options=(
 select opt in "${options[@]}"
 do
     echo $opt
-    java -jar build/RunJPF.jar src/examples/"$opt.jpf"
+    java -jar build/RunJPF.jar src/examples/"$opt".jpf
 done
