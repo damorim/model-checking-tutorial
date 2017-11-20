@@ -1,42 +1,39 @@
-FROM alpine:latest
+FROM openjdk:8u131-jdk-alpine
 
-# base
+# Update Alpine Repository
 RUN apk update
 
-# java dependencies
-RUN { \
-		echo '#!/bin/sh'; \
-		echo 'set -e'; \
-		echo; \
-		echo 'dirname "$(dirname "$(readlink -f "$(which javac || which java)")")"'; \
-	} > /usr/local/bin/docker-java-home \
-	&& chmod +x /usr/local/bin/docker-java-home
-ENV JAVA_HOME /usr/lib/jvm/java-1.8-openjdk
-ENV PATH $PATH:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin
+# Install JPF dependencies
+RUN apk add mercurial \
+	&& apk add --no-cahe ca-certificates \
+	&& update-ca-certificates \
+	&& apk add --no-cache wget openssl \
+	&& apk add bash
 
-ENV JAVA_VERSION 8u131
-ENV JAVA_ALPINE_VERSION 8.131.11-r2
+# Download JUnit to Java's share directory
+RUN mkdir -p /usr/share/java \
+	&& wget https://github.com/junit-team/junit4/releases/download/r4.12/junit-4.12.jar -O /usr/share/java/junit.jar
 
-RUN set -x \
-	&& apk add --no-cache \
-		openjdk8="$JAVA_ALPINE_VERSION" \
-	&& [ "$JAVA_HOME" = "$(docker-java-home)" ]
+# Download Apache ant
+RUN wget http://ftp.unicamp.br/pub/apache//ant/binaries/apache-ant-1.10.1-bin.tar.gz -O /usr/share/java/apache-ant.tar.gz \
+	&& cd /usr/share/java \
+	&& tar -xf apache-ant.tar.gz \
+	&& rm apache-ant.tar.gz
 
-# JPF dependencies
-RUN apk add apache-ant --update-cache --repository http://dl-4.alpinelinux.org/alpine/edge/testing/ --allow-untrusted && \
-    apk add junit && \
-    apk add mercurial
-
-ENV ANT_HOME /usr/share/java/apache-ant
+ENV ANT_HOME /usr/share/java/apache-ant-1.10.1
 ENV PATH $PATH:$ANT_HOME/bin
 ENV JUNIT_HOME /usr/share/java/
 ENV CLASSPATH $CLASSPATH:$JUNIT_HOME/junit.jar
 
-# clone jpf repo
-RUN mkdir -p /opt/jpf && \
-    cd /opt/jpf && hg clone https://babelfish.arc.nasa.gov/hg/jpf/jpf-core 
-    
-RUN cd /opt/jpf/jpf-core && \
-    ant build 
+# Cloning NASA's JPF Repository
+RUN mkdir -p /opt/jpf \
+	&& cd /opt/jpf \
+	&& hg clone https://babelfish.arc.nasa.gov/hg/jpf/jpf-core 
 
-ENTRYPOINT cd /opt/jpf/jpf-core && java -jar build/RunJPF.jar src/examples/NumericValueCheck.jpf 
+WORKDIR /opt/jpf/jpf-core
+
+RUN ant build
+
+ADD entrypoint.sh /opt/jpf/jpf-core
+
+ENTRYPOINT /bin/bash entrypoint.sh
