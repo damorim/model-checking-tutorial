@@ -17,12 +17,12 @@ TODO
 Make sure you have docker installed by running:
 > $ docker -v
 
-Download the [dockerfile]https://drive.google.com/file/d/1EWKDRwgO3pnUAdz3eXI-WUZ1hJsskQv7/view?usp=sharing 
+Download the [Dockerfile]https://drive.google.com/file/d/1EWKDRwgO3pnUAdz3eXI-WUZ1hJsskQv7/view?usp=sharing 
 
 Build 
 > $ docker build -t jpf .
 
-Run it (JPF numeric sample )
+Run it (Simple JPF numeric example)
 > $ docker run -it jpf
 ```
 
