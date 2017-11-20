@@ -14,7 +14,10 @@ TODO
 
 ```markdown
 
-Make sure you have docker installed by running:
+# Make sure you have docker installed by running:
+> $ docker -v
+
+# Then, just execute this command and press <Enter>
 > $ docker run -it lhsm/jpf-examples:latest
 
 ```
