@@ -29,7 +29,9 @@ Run samples with:
 
 Modify samples (.java) and configuration (.jpf) files:
 > $ cd src/examples/
+
 > $ nano "class you want to modify"{.java, .jpf}
+
 > $ cd ../../ && ant build
 
 ### Running SPF
@@ -42,6 +44,8 @@ Run samples with:
 
 Modify samples and .jpf files:
 > $ cd src/examples/
+
 > $ nano "class you want to modify"{.java, .jpf}
+
 > $ cd ../../ && ant build
 
