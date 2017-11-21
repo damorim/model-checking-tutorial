@@ -42,7 +42,7 @@ $ cd ../../ && ant build
 
 Spawn SPF container:
 ```bash
-$ docker run -it dmtsj/spf-examples:latest
+$ docker run -it davinomjr/spf-examples:latest
 ```
 
 Run samples with:
