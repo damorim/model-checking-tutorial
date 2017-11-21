@@ -22,30 +22,37 @@ Software Requirements:
 ### Running JPF:
 
 Spawn JPF container:
-> $ docker run -it lhsm/jpf-examples:latest
+```bash
+$ docker run -it lhsm/jpf-examples:latest
+```
 
 Run samples with:
-> $ ./jpf-samples.sh
+```bash
+$ ./jpf-samples.sh
+```
 
 Modify samples (.java) and configuration (.jpf) files:
-> $ cd src/examples/
-
-> $ nano "class you want to modify"{.java, .jpf}
-
-> $ cd ../../ && ant build
+```bash
+$ cd src/examples/
+$ nano "class you want to modify"{.java, .jpf}
+$ cd ../../ && ant build
+```
 
 ### Running SPF
 
 Spawn SPF container:
-> $ docker run -it dmtsj/spf-examples:latest
+```bash
+$ docker run -it dmtsj/spf-examples:latest
+```
 
 Run samples with:
-> $ ./spf-samples.sh
+```bash
+$ ./spf-samples.sh
+```
 
 Modify samples and .jpf files:
-> $ cd src/examples/
-
-> $ nano "class you want to modify"{.java, .jpf}
-
-> $ cd ../../ && ant build
-
+```bash
+$ cd src/examples/
+$ nano "class you want to modify"{.java, .jpf}
+$ cd ../../ && ant build
+```
