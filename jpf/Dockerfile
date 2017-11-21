@@ -9,6 +9,7 @@ RUN apk add mercurial \
 	&& update-ca-certificates \
 	&& apk add --no-cache wget openssl \
 	&& apk add bash
+	&& apk add nano
 
 # Download JUnit to Java's share directory
 RUN mkdir -p /usr/share/java \
@@ -34,6 +35,6 @@ WORKDIR /opt/jpf/jpf-core
 
 RUN ant build
 
-ADD entrypoint.sh /opt/jpf/jpf-core
+ADD jpf-samples.sh /opt/jpf/jpf-core
 
-ENTRYPOINT /bin/bash entrypoint.sh
+ENTRYPOINT /bin/bash 

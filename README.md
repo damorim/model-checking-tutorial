@@ -8,18 +8,40 @@ In the last decade, the community started to gain interest in program model chec
 
 JPF is an explicit-state model checker for Java programs.  It is specially focused in the verification of concurrent programs.
 
-### Running JPF:
+# SPF
+
+TODO
+
+## Running Samples
 
 We will use Docker containers to facilitate the setup of tools.  The only requirement for using this demo is Docker itself.  All dependencies necessary to run the tools are encoded within each Docker container.
 
 Software Requirements:
 - Docker >= 17.09.0-ce ([Download](https://store.docker.com/search?offering=enterprise&type=edition)).
 
+### Running JPF:
+
 Spawn JPF container:
 > $ docker run -it lhsm/jpf-examples:latest
 
-```
+Run samples with:
+> $ ./jpf-samples.sh
 
-# SPF
+Modify samples (.java) and configuration (.jpf) files:
+> $ cd src/examples/
+> $ nano "class you want to modify"{.java, .jpf}
+> $ cd ../../ && ant build
 
-TODO
+### Running SPF
+
+Spawn SPF container:
+> $ docker run -it dmtsj/spf-examples:latest
+
+Run samples with:
+> $ ./spf-samples.sh
+
+Modify samples and .jpf files:
+> $ cd src/examples/
+> $ nano "class you want to modify"{.java, .jpf}
+> $ cd ../../ && ant build
+
