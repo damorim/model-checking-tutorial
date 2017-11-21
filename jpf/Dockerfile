@@ -8,8 +8,8 @@ RUN apk add mercurial \
 	&& apk add --no-cahe ca-certificates \
 	&& update-ca-certificates \
 	&& apk add --no-cache wget openssl \
-	&& apk add bash
-	&& apk add nano
+	&& apk add bash \
+	&& apk add nano emacs vim
 
 # Download JUnit to Java's share directory
 RUN mkdir -p /usr/share/java \
@@ -26,15 +26,15 @@ ENV PATH $PATH:$ANT_HOME/bin
 ENV JUNIT_HOME /usr/share/java/
 ENV CLASSPATH $CLASSPATH:$JUNIT_HOME/junit.jar
 
-# Cloning NASA's JPF Repository
+# Cloning NASA's JPF Repository on change with hash 05294e96a284 (latest stable)
 RUN mkdir -p /opt/jpf \
 	&& cd /opt/jpf \
-	&& hg clone https://babelfish.arc.nasa.gov/hg/jpf/jpf-core 
+	&& hg clone https://babelfish.arc.nasa.gov/hg/jpf/jpf-core -r 05294e96a284
 
 WORKDIR /opt/jpf/jpf-core
 
 RUN ant build
 
-ADD jpf-samples.sh /opt/jpf/jpf-core
+ADD entrypoint.sh /opt/jpf/jpf-core
 
-ENTRYPOINT /bin/bash 
+CMD bash entrypoint.sh

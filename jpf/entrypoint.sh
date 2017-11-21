@@ -18,10 +18,12 @@ do
 
     select opt in "${options[@]}"
     do
+        if [ "$opt" == "" ]; then
+           opt="BoundedBuffer"
+        fi
         echo $opt
         java -jar build/RunJPF.jar src/examples/"$opt".jpf
         echo 'Finished running test'
-        echo '********************************************************************************'
         break;        
     done
 done

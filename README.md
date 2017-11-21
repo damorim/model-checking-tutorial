@@ -23,12 +23,12 @@ Software Requirements:
 
 Spawn JPF container:
 ```bash
-$ docker run -it lhsm/jpf-examples:latest
+$ docker run -it lhsm/jpf-examples
 ```
 
-Run samples with:
+If you want to play with those samples:
 ```bash
-$ ./jpf-samples.sh
+$ docker run -it lhsm/jpf-examples bash
 ```
 
 Modify samples (.java) and configuration (.jpf) files:
@@ -38,16 +38,18 @@ $ nano "class you want to modify"{.java, .jpf}
 $ cd ../../ && ant build
 ```
 
+Note that, in this environment, you can edit .java files with **emacs**, **vi** and **nano**.
+
 ### Running SPF
 
 Spawn SPF container:
 ```bash
-$ docker run -it davinomjr/spf-examples:latest
+$ docker run -it davinomjr/spf-examples
 ```
 
-Run samples with:
+If you want to play with those samples:
 ```bash
-$ ./spf-samples.sh
+$ docke run -it lhsm/spf-examples bash
 ```
 
 Modify samples and .jpf files:
@@ -56,3 +58,5 @@ $ cd src/examples/
 $ nano "class you want to modify"{.java, .jpf}
 $ cd ../../ && ant build
 ```
+
+Note that, in this environment, you can edit .java files with **emacs**, **vi** and **nano**.

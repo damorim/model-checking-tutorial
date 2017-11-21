@@ -9,6 +9,6 @@ WORKDIR /opt/jpf/jpf-symbc
 # Build SPF
 RUN ant build 
 
-ADD spf-samples.sh /opt/jpf/jpf-symbc
+ADD entrypoint.sh /opt/jpf/jpf-symbc
 
-ENTRYPOINT /bin/bash 
+CMD bash entrypoint.sh
