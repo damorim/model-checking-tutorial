@@ -48,12 +48,12 @@ $ cd ../../ && ant build
 
 Spawn SPF container:
 ```bash
-$ docker run -it dmtsj/spf-examples
+$ docker run -it davinomjr/spf-examples
 ```
 
 If you want to play with those samples:
 ```bash
-$ docke run -it dmtsj/spf-examples bash
+$ docke run -it davinomjr/spf-examples bash
 ```
 
 Modify samples and .jpf files:
@@ -67,10 +67,10 @@ $ cd ../../ && ant build
 
 Spawn JBMC container:
 ```bash
-$ docker run -it dmtsj/jbmc-examples
+$ docker run -it davinomjr/jbmc-examples
 ```
 
-You can run different tests located on regression/cbmc-java folder. For example:
+You can run different tests in regression/cbmc-java folder. For example:
 ```bash
 $ cd regression/cbmc-java
 $ cd Inheritance1/
