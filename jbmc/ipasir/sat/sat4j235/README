@@ -1,0 +1,21 @@
+This "glue" code for connecting Sat4j with ipasir has two parts:
+- the java part: Sat4jIpasir.java
+- the c++ part: ipasirsat4jglue.cpp
+
+The java part impements an ipasir like interface using sat4j calls.
+Except for the interruption functionality all the methods correspond
+to the ipasir definitions. There is a unit test (Sat4jIpasirTest.java)
+for this part.
+
+The c++ part deals with the technicalities of calling java methods
+from a native application using the JNI technology. For most of the
+methods there is a corresponding Java method to call. The exception
+is the interruption functionality. Ipasir uses callbacks and the
+java part uses a direct interrupt function. Therefore the c++ part
+runs a thread for calling the callback function defined via the
+ipasir interface and notifies the java part using its interrupt
+method.
+
+Tomas Balyo
+KIT, Karlsruhe
+22.1.2015

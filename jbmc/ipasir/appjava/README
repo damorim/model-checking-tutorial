@@ -1,0 +1,17 @@
+This is an example of using an ipasir compatible SAT 
+solver (Picosat960) in a Java application.
+
+The ipasir4j folder contains a Java version of the ipasir
+interface and c++ JNI glue code to connect it with ipasir.
+This part of the code is reusable without modification for
+any Java application. However, it requires modifications
+of the first part of build.sh if you wish to use another 
+ipasir solver.
+
+The ipasir4jEssentials folder contains a simple Java
+application using the ipasir4j interface. In order to
+build and run this application first build ipasir4j.
+
+Tomas Balyo
+KIT, Karlsruhe
+22.1.2015

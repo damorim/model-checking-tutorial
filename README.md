@@ -12,12 +12,18 @@ JPF is an explicit-state model checker for Java programs.  It is specially focus
 
 TODO
 
+# JBMC
+
+TODO
+
 ## Running Samples
 
 We will use Docker containers to facilitate the setup of tools.  The only requirement for using this demo is Docker itself.  All dependencies necessary to run the tools are encoded within each Docker container.
 
 Software Requirements:
 - Docker >= 17.09.0-ce ([Download](https://store.docker.com/search?offering=enterprise&type=edition)).
+
+Note that, in all docker containers below, you can edit .java files with **emacs**, **vi** or **nano**.
 
 ### Running JPF:
 
@@ -38,18 +44,16 @@ $ nano "class you want to modify"{.java, .jpf}
 $ cd ../../ && ant build
 ```
 
-Note that, in this environment, you can edit .java files with **emacs**, **vi** and **nano**.
-
-### Running SPF
+### Running SPF:
 
 Spawn SPF container:
 ```bash
-$ docker run -it davinomjr/spf-examples
+$ docker run -it dmtsj/spf-examples
 ```
 
 If you want to play with those samples:
 ```bash
-$ docke run -it lhsm/spf-examples bash
+$ docke run -it dmtsj/spf-examples bash
 ```
 
 Modify samples and .jpf files:
@@ -59,4 +63,16 @@ $ nano "class you want to modify"{.java, .jpf}
 $ cd ../../ && ant build
 ```
 
-Note that, in this environment, you can edit .java files with **emacs**, **vi** and **nano**.
+### Running JBMC
+
+Spawn JBMC container:
+```bash
+$ docker run -it dmtsj/jbmc-examples
+```
+
+You can run different tests located on regression/cbmc-java folder. For example:
+```bash
+$ cd regression/cbmc-java
+$ cd Inheritance1/
+$ jbmc Inheritance1.class
+```
