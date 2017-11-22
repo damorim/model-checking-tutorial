@@ -2,7 +2,9 @@
 
 Model Checking is a technique originally proposed for checking the correctness of system designs. A model is a characterization of a computing system and a property describes intended behavior of the system (e.g., deadlock freedom, data race freedom, etc.).  The languages for characterization models and properties vary. The traditional approach to model checking, often referred to as automata model checking, translates the model in a graph, where nodes correspond to abstract states and edges correspond to state transitions. Safety properties, like those mentioned above, translates to graph reachability (i.e., finding property violations consists of finding "bad" states, reachable from the initial state, that violates the given property). The main challenge of model checking is scalability as the number of states is typically very high.  For this reason, this problem is often referred to as "the state explosion problem".
 
-In the last decade, the community started to gain interest in program model checking, where the subject of analysis is a program as opposed to program models. In this setup, states in the model correspond to program states, containing pc, heap, stack, and static area. The motivation is that dealing with programs directly may reduce the gap to transition model checking to practice. The focus of this tutorial is on program model checking.
+In the last decade, the community started to gain interest in program model checking, where the subject of analysis is a program as opposed to program models. In this setup, states in the model correspond to real program states. The motivation is that dealing with programs directly may reduce the gap to transition model checking to practice. 
+
+The focus of this tutorial is on program model checking!
 
 ## Disclaimer
 
