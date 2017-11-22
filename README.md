@@ -4,24 +4,20 @@ Model Checking is a technique originally proposed for checking the correctness o
 
 In the last decade, the community started to gain interest in program model checking, where the subject of analysis is a program as opposed to program models. In this setup, states in the model correspond to program states, containing pc, heap, stack, and static area. The motivation is that dealing with programs directly may reduce the gap to transition model checking to practice. The focus of this tutorial is on program model checking.
 
-# JPF
+## Disclaimer
 
-JPF is an explicit-state model checker for Java programs.  It is specially focused in the verification of concurrent programs.
-
-# SPF
-
-TODO
-
-## Running Samples
-
-We will use Docker containers to facilitate the setup of tools.  The only requirement for using this demo is Docker itself.  All dependencies necessary to run the tools are encoded within each Docker container.
+We will use Docker containers to facilitate the setup of tools.  For your convenience, the only requirement for running this demo is Docker itself. All dependencies necessary to run the tools are encoded within each Docker container that we created.
 
 Software Requirements:
 - Docker >= 17.09.0-ce ([Download](https://store.docker.com/search?offering=enterprise&type=edition)).
 
 Note that, in all docker containers below, you can edit .java files with **emacs**, **vi** or **nano**.
 
-### Running JPF:
+# JPF
+
+JPF is an explicit-state model checker for Java programs.  It is specially focused in the verification of concurrent programs.
+
+### Running:
 
 Spawn JPF container:
 ```bash
@@ -39,8 +35,11 @@ $ cd src/examples/
 $ nano "class you want to modify"{.java, .jpf}
 $ cd ../../ && ant build
 ```
+# SPF
 
-### Running SPF:
+TODO.........................................TODO.........................................
+
+### Running:
 
 Spawn SPF container:
 ```bash
