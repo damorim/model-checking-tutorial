@@ -15,7 +15,7 @@ Software Requirements:
 
 Note that, in all docker containers below, you can edit .java files with **emacs**, **vi** or **nano**.
 
-# JPF
+# Java Pathfinder (JPF)
 
 JPF is an explicit-state model checker for Java programs.  It is specially focused in the verification of concurrent programs.
 
@@ -37,7 +37,7 @@ $ cd src/examples/
 $ nano "class you want to modify"{.java, .jpf}
 $ cd ../../ && ant build
 ```
-# SPF
+# Symbolic Pathfinder (SPF)
 
 TODO.........................................TODO.........................................
 
@@ -60,7 +60,7 @@ $ nano "class you want to modify"{.java, .jpf}
 $ cd ../../ && ant build
 ```
 
-# JBMC 
+# Java Bounded Model Checker (JBMC)
 
 JBMC is a Bounded Model Checker for Java program that uses the same back-end of the popular tool for C programs, CBMC.
 
