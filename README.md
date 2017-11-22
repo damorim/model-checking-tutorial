@@ -12,10 +12,6 @@ JPF is an explicit-state model checker for Java programs.  It is specially focus
 
 TODO
 
-# JBMC
-
-TODO
-
 ## Running Samples
 
 We will use Docker containers to facilitate the setup of tools.  The only requirement for using this demo is Docker itself.  All dependencies necessary to run the tools are encoded within each Docker container.
@@ -63,7 +59,11 @@ $ nano "class you want to modify"{.java, .jpf}
 $ cd ../../ && ant build
 ```
 
-### Running JBMC
+# JBMC 
+
+JBMC is a Bounded Model Checker for Java program that uses the same back-end of the popular tool for C programs, CBMC.
+
+### Running
 
 Spawn JBMC container:
 ```bash
