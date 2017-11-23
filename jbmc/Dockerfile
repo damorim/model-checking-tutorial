@@ -1,7 +1,8 @@
-FROM alpine:3.5
+FROM openjdk:8u131-jdk-alpine
 
 # Compilation dependencies
 RUN apk add --no-cache \
+      apkbuild-cpan \
       gcc \
       g++ \
       make \
@@ -16,8 +17,7 @@ RUN apk add --no-cache \
       parallel \
       nano \
       emacs \
-      vim \
-    && echo yes | cpan Thread::Pool::Simple
+      vim 
 
 # Clone CBMC repo
 RUN git clone https://github.com/diffblue/cbmc.git 
