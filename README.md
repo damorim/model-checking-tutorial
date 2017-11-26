@@ -23,12 +23,12 @@ JPF is an explicit-state model checker for Java programs.  It is specially focus
 
 Spawn JPF container:
 ```bash
-$ docker run -it lhsm/jpf-examples
+$ docker run -it --rm lhsm/jpf-examples
 ```
 
 If you want to play with those samples:
 ```bash
-$ docker run -it lhsm/jpf-examples bash
+$ docker run -it --rm lhsm/jpf-examples bash
 ```
 
 Modify samples (.java) and configuration (.jpf) files:
@@ -45,12 +45,12 @@ SPF is a symbolic execution engine implemented on top of the JPF model checker.
 
 Spawn SPF container:
 ```bash
-$ docker run -it davinomjr/spf-examples
+$ docker run -it --rm davinomjr/spf-examples
 ```
 
 If you want to play with those samples:
 ```bash
-$ docker run -it davinomjr/spf-examples bash
+$ docker run -it --rm davinomjr/spf-examples bash
 ```
 
 Modify samples and .jpf files:
@@ -68,7 +68,7 @@ JBMC is a Bounded Model Checker for Java program that uses the same back-end of 
 
 Spawn JBMC container:
 ```bash
-$ docker run -it davinomjr/jbmc-examples
+$ docker run -it --rm davinomjr/jbmc-examples
 ```
 
 You can run different tests in regression/cbmc-java folder. For example:
