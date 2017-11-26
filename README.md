@@ -34,7 +34,7 @@ $ docker run -it lhsm/jpf-examples bash
 Modify samples (.java) and configuration (.jpf) files:
 ```bash
 $ cd src/examples/
-$ nano "class you want to modify"{.java, .jpf}
+$ {emacs,nano,vim} "class you want to modify"{.java, .jpf}
 $ cd ../../ && ant build
 ```
 # Symbolic Pathfinder (SPF)
@@ -56,7 +56,7 @@ $ docker run -it davinomjr/spf-examples bash
 Modify samples and .jpf files:
 ```bash
 $ cd src/examples/
-$ nano "class you want to modify"{.java, .jpf}
+$ {emacs,nano,vim} "class you want to modify"{.java, .jpf}
 $ cd ../../ && ant build
 ```
 

@@ -1,0 +1,6 @@
+target=ArithmeticExample
+classpath=${jpf-symbc}/build/examples
+symbolic.debug=true
+
+symbolic.method=ArithmeticExample.test(sym)
+listener = gov.nasa.jpf.symbc.sequences.SymbolicSequenceListener

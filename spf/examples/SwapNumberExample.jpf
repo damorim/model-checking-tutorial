@@ -1,0 +1,6 @@
+target=SwapNumberExample
+classpath=${jpf-symbc}/build/examples
+symbolic.debug=true
+
+symbolic.method=SwapNumberExample.test(sym#sym)
+listener=.symbc.SymbolicListener
