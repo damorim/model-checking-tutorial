@@ -33,6 +33,8 @@ RUN mkdir -p /opt/jpf \
 
 WORKDIR /opt/jpf/jpf-core
 
+ADD *.j* /opt/jpf/jpf-core/src/examples/
+
 RUN ant build
 
 ADD entrypoint.sh /opt/jpf/jpf-core

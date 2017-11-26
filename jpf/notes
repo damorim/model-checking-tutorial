@@ -1,0 +1,21 @@
+What JPF is?
+- Depends on how you configure it. Basically, the JPF "Core" module is a custom VM for Java.
+  It is used to find defects in the programs generating a report for further analysis.
+
+Notes: Since the JPF explores systematically **all possible executions**, this means that
+       JPF number of paths can (and possibly will) grow exponentially. Typical choices are different
+       scheduling sequences or random values.
+
+First, JPF executes the program to find all possible ways to find defects, and then, explains
+you what caused those defects.
+
+JPF vs Testing
+While Testing takes only one path in consideration, which is the path defined by the developer, or by the tool,
+JPF does not define that path. As said before, it explores **all possible** paths.
+
+***Show RAND example***
+ 
+
+
+==== CAVEATS ====
+- JPF is not a lightweight tool

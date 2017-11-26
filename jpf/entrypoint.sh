@@ -14,6 +14,8 @@ do
         "StopWatch"
         "TestExample-coverage"
         "oldclassic"
+        "MyRacer"
+        "MyDeadlock"
     )
 
     select opt in "${options[@]}"
