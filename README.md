@@ -39,7 +39,7 @@ $ cd ../../ && ant build
 ```
 # Symbolic Pathfinder (SPF)
 
-TODO.........................................TODO.........................................
+SPF is a symbolic execution engine implemented on top of the JPF model checker.
 
 ### Running:
 
@@ -50,7 +50,7 @@ $ docker run -it davinomjr/spf-examples
 
 If you want to play with those samples:
 ```bash
-$ docke run -it davinomjr/spf-examples bash
+$ docker run -it davinomjr/spf-examples bash
 ```
 
 Modify samples and .jpf files:
@@ -62,7 +62,7 @@ $ cd ../../ && ant build
 
 # Java Bounded Model Checker (JBMC)
 
-JBMC is a Bounded Model Checker for Java program that uses the same back-end of the popular tool for C programs, CBMC.
+JBMC is a Bounded Model Checker for Java program that uses the same back-end of the Bounded Model Checker for C programs, CBMC.
 
 ### Running
 
