@@ -13,7 +13,7 @@ We will use Docker containers to facilitate the setup of tools.  For your conven
 Software Requirements:
 - Docker >= 17.09.0-ce ([Download](https://store.docker.com/search?offering=enterprise&type=edition)).
 
-Note that, in all docker containers below, you can edit .java files with **emacs**, **vi** or **nano**.
+Note that, in all docker containers below, you can edit files with **emacs**, **vi** or **nano**.
 
 # Java Pathfinder (JPF)
 
@@ -34,7 +34,7 @@ $ docker run -it --rm lhsm/jpf-examples bash
 Modify samples (.java) and configuration (.jpf) files:
 ```bash
 $ cd src/examples/
-$ {emacs,nano,vim} "class you want to modify"{.java, .jpf}
+$ {emacs,nano,vim} "file you want to modify"{.java, .jpf}
 $ cd ../../ && ant build
 ```
 # Symbolic Pathfinder (SPF)
@@ -53,10 +53,10 @@ If you want to play with those samples:
 $ docker run -it --rm davinomjr/spf-examples bash
 ```
 
-Modify samples and .jpf files:
+Modify samples (.java) and configuration (.jpf) files:
 ```bash
 $ cd src/examples/
-$ {emacs,nano,vim} "class you want to modify"{.java, .jpf}
+$ {emacs,nano,vim} "file you want to modify"{.java, .jpf}
 $ cd ../../ && ant build
 ```
 
