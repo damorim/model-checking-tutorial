@@ -36,7 +36,14 @@ Modify samples (.java) and configuration (.jpf) files:
 $ cd src/examples/
 $ {emacs,nano,vim} "file you want to modify"{.java, .jpf}
 $ cd ../../ && ant build
+$ java -jar build/RunJPF.jar src/examples/"file you modified".jpf
 ```
+
+To display every possible JPF configuration option:
+```bash
+$ java -jar build/RunJPF.jar src/examples/"file you modified".jpf -show
+```
+
 # Symbolic Pathfinder (SPF)
 
 SPF is a symbolic execution engine implemented on top of the JPF model checker.
