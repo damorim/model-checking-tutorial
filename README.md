@@ -11,7 +11,17 @@ The focus of this tutorial is on program model checking!
 We will use Docker containers to facilitate the setup of tools.  For your convenience, the only requirement for running this demo is Docker itself. All dependencies necessary to run the tools are encoded within each Docker container that we created.
 
 Software Requirements:
-- Docker >= 17.09.0-ce ([Download](https://store.docker.com/search?offering=enterprise&type=edition)).
+- Docker >= 17.09.0-CE ([Download](https://store.docker.com/search?type=edition&offering=community)).
+
+Make sure Docker is running with:
+```bash
+$ docker ps
+```
+
+If you get a message such as "Cannot connect to the Docker daemon...", you can start Docker daemon with:
+```bash
+$ sudo service docker start
+```
 
 Note that, in all docker containers below, you can edit files with **emacs**, **vi** or **nano**.
 
