@@ -60,12 +60,7 @@ If you want to play with those samples:
 $ docker run -it --rm davinomjr/spf-examples bash
 ```
 
-Modify samples (.java) and configuration (.jpf) files:
-```bash
-$ cd src/examples/
-$ {emacs,nano,vim} "file you want to modify"{.java, .jpf}
-$ cd ../../ && ant build
-```
+**You can modify and run the samples doing the same as you would with JPF (instructions above).**
 
 # Java Bounded Model Checker (JBMC)
 
@@ -83,4 +78,12 @@ You can run different tests in regression/cbmc-java folder. For example:
 $ cd regression/cbmc-java
 $ cd Inheritance1/
 $ jbmc Inheritance1.class
+```
+
+If you want to modify a sample and run jbmc again, you can do so by:
+```bash
+$ cd regression/cbmc-java
+$ {emacs,nano,vim} "class you want to modify".java
+$ javac "class you just modified".java
+$ jbmc "class you just modified".class
 ```
